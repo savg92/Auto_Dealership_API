@@ -1,0 +1,41 @@
+# Ignore all files in this directory
+*
+
+# Except this file
+!.gitignore
+
+# Ignore Python build artifacts
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignore Django migration files
+*/migrations/*
+
+# Ignore the virtual environment directory
+env/
+
+# Ignore IDE-specific files
+.vscode/
+*.idea/
+
+# Ignore the database file
+db.sqlite3
+
+# Ignore the media files
+media/
+
+# Ignore the static files
+static/
+
+# Ignore the logs
+logs/
+
+# Ignore the cache
+cache/
