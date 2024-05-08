@@ -25,17 +25,4 @@ env/
 .vscode/
 *.idea/
 
-# Ignore the database file
-db.sqlite3
 
-# Ignore the media files
-media/
-
-# Ignore the static files
-static/
-
-# Ignore the logs
-logs/
-
-# Ignore the cache
-cache/
