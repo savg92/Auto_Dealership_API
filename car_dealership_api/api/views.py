@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from rest_framework import viewsets
 from .models import DealerLocation, Car, Version, Feature
 from .serializers import DealerLocationSerializer, CarSerializer, VersionSerializer, FeatureSerializer
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 class DealerLocationViewSet(viewsets.ModelViewSet):
     queryset = DealerLocation.objects.all()
@@ -18,3 +19,15 @@ class VersionViewSet(viewsets.ModelViewSet):
 class FeatureViewSet(viewsets.ModelViewSet):
     queryset = Feature.objects.all()
     serializer_class = FeatureSerializer
+
+
+
+class DealerLocationViewSet(viewsets.ModelViewSet):
+    queryset = DealerLocation.objects.all()
+    serializer_class = DealerLocationSerializer
+    permission_classes = [IsAuthenticated]  # Require authentication for all actions
+
+class CarViewSet(viewsets.ModelViewSet):
+    queryset = Car.objects.all()
+    serializer_class = CarSerializer
+    permission_classes = [IsAuthenticated, IsAdminUser]  # Require authentication and admin status
