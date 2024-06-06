@@ -8,9 +8,9 @@ class DealerLocationViewSet(viewsets.ModelViewSet):
     queryset = DealerLocation.objects.all()
     serializer_class = DealerLocationSerializer
 
-class CarViewSet(viewsets.ModelViewSet):
-    queryset = Car.objects.all()
-    serializer_class = CarSerializer
+# class CarViewSet(viewsets.ModelViewSet):
+#     queryset = Car.objects.all()
+#     serializer_class = CarSerializer
 
 class VersionViewSet(viewsets.ModelViewSet):
     queryset = Version.objects.all()
@@ -27,7 +27,20 @@ class DealerLocationViewSet(viewsets.ModelViewSet):
     serializer_class = DealerLocationSerializer
     permission_classes = [IsAuthenticated]  # Require authentication for all actions
 
+# class CarViewSet(viewsets.ModelViewSet):
+#     queryset = Car.objects.all()
+#     serializer_class = CarSerializer
+#     # permission_classes = [IsAuthenticated, IsAdminUser]  # Require authentication and admin status
+#     permission_classes = [IsAuthenticated]  # Require authentication and admin status
+
 class CarViewSet(viewsets.ModelViewSet):
     queryset = Car.objects.all()
     serializer_class = CarSerializer
-    permission_classes = [IsAuthenticated, IsAdminUser]  # Require authentication and admin status
+
+    def get_permissions(self):
+        if self.request.method == 'GET':
+            # No permissions are required for GET requests
+            return []
+        else:
+            # For non-GET requests, req            # For non-GET requests, require authentication
+            return [IsAuthenticated()]
