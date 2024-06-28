@@ -57,7 +57,7 @@ class Car(models.Model):
     image = models.ImageField(upload_to='car_images', blank=True, null=True)
 
     def __str__(self):
-        return f"{self.make} {self.model} ({self.year})"
+        return f"{self.make} {self.model} ({self.year})" 
 
 class Version(models.Model):
     name = models.CharField(max_length=100)
