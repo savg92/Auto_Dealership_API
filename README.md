@@ -59,8 +59,10 @@ The API offers the following endpoints:
 - /versions: Manage different versions of car features.
 
 ### API Documentation
-The API documentation is available at http://
-localhost:8000/api/docs/. You can view the API endpoints, make requests, and see the responses using the Swagger UI.
+The API documentation is available at:
+- http://localhost:8000/api/ for the Django Rest Framework browsable API.
+- http://localhost:8000/api/docs/ for the Swagger UI documentation.
+You can view the API endpoints, make requests, and see the responses using the Swagger UI.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a pull request or open an issue if you encounter any problems.
