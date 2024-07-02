@@ -35,6 +35,12 @@ For initial testing, you can seed the database with sample data by running:
 ```sh
 python manage.py seed_data
 ```
+
+### Read the API Documentation
+The API documentation is available at:
+- http://localhost:8000/api/docs/ for the Swagger UI documentation.
+- http://localhost:8000/api/ for the Django Rest Framework browsable API.
+
 ### Project Structure
 The project is structured as follows:
 
