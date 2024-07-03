@@ -8,7 +8,11 @@ This API serves an auto dealership, facilitating operations such as creating, re
 ```sh
 pip install -r requirements.txt
 ```
-4. Run the server using
+4. Run the migrations using
+```sh
+python manage.py migrate
+```
+5. Run the server using
 ```sh
 python manage.py runserver
 ```
