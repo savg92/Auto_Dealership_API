@@ -14,6 +14,11 @@ echo "Updating and compiling requirements with uv in: $ROOT_DIR"
 # uv pip upgrade --all
 
 # Compile the pinned requirements (this is the canonical file used by the project)
-uv pip compile requirements.txt --output-file requirements.txt
+# If requirements.in exists, use it for upgrades; otherwise use requirements.txt
+if [ -f requirements.in ]; then
+    uv pip compile requirements.in --output-file requirements.txt
+else
+    uv pip compile requirements.txt --output-file requirements.txt
+fi
 
 echo "requirements.txt regenerated. Review and commit the changes."
