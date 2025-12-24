@@ -2,19 +2,19 @@
 This API serves an auto dealership, facilitating operations such as creating, reading, updating, and deleting cars, managing dealer locations, car features, and user accounts. Built with Django Rest Framework, it offers a comprehensive solution for dealership management.
 
 ## Installation
-1. Clone the repository.
-2. Create a virtual environment and activate it.
-3. Install the requirements by running
+1. Install [uv](https://github.com/astral-sh/uv) if not already installed.
+2. Clone the repository.
+3. Sync dependencies and create virtual environment:
 ```sh
-pip install -r requirements.txt
+uv sync
 ```
 4. Run the migrations using
 ```sh
-python manage.py migrate
+uv run python car_dealership_api/manage.py migrate
 ```
 5. Run the server using
 ```sh
-python manage.py runserver
+uv run python car_dealership_api/manage.py runserver
 ```
 
 ## Features
@@ -30,20 +30,26 @@ python manage.py runserver
 ## Running the Server
 Navigate to the project directory and run:
 ```sh
-python manage.py runserver
+uv run python car_dealership_api/manage.py runserver
 ```
 
 ### Seeding Data
 For initial testing, you can seed the database with sample data by running:
 
 ```sh
-python manage.py seed_data
+uv run python car_dealership_api/manage.py seed_data
 ```
 
 ### Read the API Documentation
 The API documentation is available at:
 - http://localhost:8000/api/docs/ for the Swagger UI documentation.
 - http://localhost:8000/api/ for the Django Rest Framework browsable API.
+
+### Updating Dependencies
+To update dependencies to their latest versions:
+```sh
+./scripts/update_requirements.sh
+```
 
 ### Project Structure
 The project is structured as follows:

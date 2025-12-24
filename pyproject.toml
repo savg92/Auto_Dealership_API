@@ -1,0 +1,27 @@
+[project]
+name = "auto-dealership-api"
+version = "0.1.0"
+description = "Auto Dealership API built with Django"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "asgiref",
+    "django",
+    "django-cors-headers",
+    "django-filter",
+    "djangorestframework",
+    "djangorestframework-simplejwt",
+    "drf-yasg",
+    "inflection",
+    "packaging",
+    "pillow",
+    "pyjwt",
+    "pytz",
+    "pyyaml",
+    "sqlparse",
+    "uritemplate"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
