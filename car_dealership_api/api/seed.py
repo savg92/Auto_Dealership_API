@@ -2,6 +2,9 @@ from .models import DealerLocation, Car, Version, Feature
 from django.contrib.auth.models import User
 
 def seed_data():
+    # Only seed if no data exists
+    if DealerLocation.objects.exists():
+        return
     # Create dealer locations
     dealer_location_1 = DealerLocation.objects.create(
         name='ABC Dealership',
