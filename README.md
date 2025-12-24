@@ -1,23 +1,31 @@
 # Auto Dealership API
+
 This API serves an auto dealership, facilitating operations such as creating, reading, updating, and deleting cars, managing dealer locations, car features, and user accounts. Built with Django Rest Framework, it offers a comprehensive solution for dealership management.
 
 ## Installation
+
 1. Install [uv](https://github.com/astral-sh/uv) if not already installed.
 2. Clone the repository.
 3. Sync dependencies and create virtual environment:
+
 ```sh
 uv sync
 ```
+
 4. Run the migrations using
+
 ```sh
 uv run python car_dealership_api/manage.py migrate
 ```
+
 5. Run the server using
+
 ```sh
 uv run python car_dealership_api/manage.py runserver
 ```
 
 ## Features
+
 - **Cars Management:** Add, list, retrieve, update, and delete cars in the dealership inventory.
 - **Dealer Locations Management:** Manage dealership locations including adding, listing, updating, and deleting locations.
 - **Features Management:** Handle car features including adding, listing, updating, and deleting features.
@@ -25,15 +33,19 @@ uv run python car_dealership_api/manage.py runserver
 - **Version Management:** Manage different versions of car features, ensuring the dealership can track changes over time.
 
 ## Advanced Usage
+
 - **Authentication and Authorization:** Secure access to the API with user authentication and role-based permissions, ensuring that only authorized users can perform certain operations.
 
 ## Running the Server
+
 Navigate to the project directory and run:
+
 ```sh
 uv run python car_dealership_api/manage.py runserver
 ```
 
 ### Seeding Data
+
 For initial testing, you can seed the database with sample data by running:
 
 ```sh
@@ -41,17 +53,22 @@ uv run python car_dealership_api/manage.py seed_data
 ```
 
 ### Read the API Documentation
+
 The API documentation is available at:
+
 - http://localhost:8000/api/docs/ for the Swagger UI documentation.
 - http://localhost:8000/api/ for the Django Rest Framework browsable API.
 
 ### Updating Dependencies
+
 To update dependencies to their latest versions:
+
 ```sh
 ./scripts/update_requirements.sh
 ```
 
 ### Project Structure
+
 The project is structured as follows:
 
 - api/: Contains the Django app including models, views, serializers, and URLs for the API.
@@ -60,6 +77,7 @@ The project is structured as follows:
 - api/docs: Contains the Swagger UI documentation for the API.
 
 ### API Endpoints
+
 The API offers the following endpoints:
 
 - /cars: Manage cars in the dealership inventory.
@@ -69,21 +87,26 @@ The API offers the following endpoints:
 - /versions: Manage different versions of car features.
 
 ### API Documentation
+
 The API documentation is available at:
+
 - http://localhost:8000/api/ for the Django Rest Framework browsable API.
 - http://localhost:8000/api/docs/ for the Swagger UI documentation.
-You can view the API endpoints, make requests, and see the responses using the Swagger UI.
+  You can view the API endpoints, make requests, and see the responses using the Swagger UI.
 
 ## Contributing
+
 Contributions are welcome! Please feel free to submit a pull request or open an issue if you encounter any problems.
 
 ### Conclusion
+
 Ensure your API is properly set up and configured to meet the needs of your auto dealership, and enjoy streamlined management of your inventory, locations, and users.
 
 ### License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ### Acknowledgements
+
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 - [Swagger UI](https://swagger.io/tools/swagger-ui/)
-

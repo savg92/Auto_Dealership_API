@@ -116,3 +116,6 @@ target/
 # Otros archivos específicos del proyecto
 /media/
 /static/
+
+# Virtual environment
+.venv/
